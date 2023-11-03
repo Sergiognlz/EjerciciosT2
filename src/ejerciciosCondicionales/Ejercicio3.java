@@ -12,40 +12,61 @@ Diseña un programa que solicite al usuario los valores anteriores
 
 */
 public class Ejercicio3 {
-public static void main(String[] args) {
-	//creamos variables para los valores que guardaremos 
-	double comidaComprada,comidaConsumida;
-	int animales;
-	//creamos escanner 
-	Scanner sc=new Scanner(System.in);
-	//pedimos al usuario que introduzca los valores que necesitaremos
-	System.out.println("Introduce la cantidad de comida comprada");
-	//guardamos el valor
-	comidaComprada=sc.nextDouble();
-	//descartamos en caso de que el valor introducido no sea válido
-	if (comidaComprada<0){
-		//mostramos mensaje de error si el valor introducido no es válido
-		System.out.println("El valor introducido no es válido");
-	}
-//seguimos pidiendo valores
-	System.out.println("Introduce el número de animales que hay");
-	//guardamos el valor
-	animales=sc.nextInt();
-	//descartamos en caso de que el valor introducido no sea válido
-		if (animales<0){
-			//mostramos mensaje de error si el valor introducido no es válido
-			System.out.println("El valor introducido no es válido");
-			
-}
-		//terminamos de pedir los valores necesarios
-		System.out.println("Introduce la cantidad de comida que consumen los animales");
-		//guardamos el valor
-		comidaConsumida=sc.nextDouble();
-		//descartamos en caso de que el valor introducido no sea válido
-		if (comidaConsumida<0){
-			//mostramos mensaje de error si el valor introducido no es válido
-			System.out.println("El valor introducido no es válido");
+	public static void main(String[] args) {
+		// creamos variables para los valores que guardaremos
+		double comidaComprada, comidaConsumida;
+		int animales = 0;
+		// creamos escanner
+		Scanner sc = new Scanner(System.in);
+
+		// pedimos al usuario que introduzca los valores que necesitaremos
+
+		do {
+			System.out.println("Introduce los kilos de comida comprada");
+			// guardamos el valor
+			comidaComprada = sc.nextDouble();
+			if (comidaComprada < 0) {
+				// mostramos mensaje de error si el valor introducido no es válido
+				System.out.println("El valor introducido no es válido");
+			}
+
+		} while (comidaComprada <= 0);
+		{
 		}
-		//
-}
+		do {
+			// seguimos pidiendo valores
+			System.out.println("Introduce el número de animales que hay");
+				// guardamos el valor
+				animales = sc.nextInt();
+			
+				if(animales<=0) {
+				// mostramos mensaje de error si el valor introducido no es válido
+				System.out.println("El valor introducido no es válido");
+			}
+		} while (animales <= 0);
+
+		do {
+			// terminamos de pedir los valores necesarios
+			System.out.println("Introduce los kilos de comida totales que consumen los animales");
+			// guardamos el valor
+			comidaConsumida = sc.nextDouble();
+			// descartamos en caso de que el valor introducido no sea válido
+			if (comidaConsumida < 0) {
+				// mostramos mensaje de error si el valor introducido no es válido
+				System.out.println("El valor introducido no es válido");
+			}
+		} while (comidaConsumida < 0);
+		{
+
+		}
+		// comparamos los valores y sacamos por pantalla
+		if (comidaComprada >= comidaConsumida) {
+			System.out.println("Hay suficiente comida para cada animal");
+		} else {
+			System.out.println(
+					"No hay suficiente comida. Cada animal consume " + comidaConsumida / animales + " kg de comida.");
+		}
+		sc.close();
+
+	}
 }
