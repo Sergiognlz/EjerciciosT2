@@ -51,13 +51,10 @@ public class Ejercicio4 {
 			case 9 -> "nueve";
 			default -> "";
 			};
-
 			System.out.println("El número introducido es " + valorUnidad);
 		}
-
 		if (numero == 10) {
 			System.out.println("El número introducido es diez");
-
 		}
 		if (numero == 20) {
 			System.out.println("El número introducido es el veinte");
@@ -67,7 +64,6 @@ public class Ejercicio4 {
 		}
 		if (numero == 40) {
 			System.out.println("El número introducido es el cuarenta");
-
 		}
 		if (numero == 50) {
 			System.out.println("El número introducido es el cincuenta");
@@ -97,11 +93,10 @@ public class Ejercicio4 {
 			case 8 -> "dieciocho";
 			case 9 -> "diecinueve";
 			default -> "";
-
 			};
 		}
-
-		if (numero>20&&numero!=30&&numero!=40&&numero!=50&&numero!=60&&numero!=70&&numero!=80&&numero!=90&&numero<= 99) {
+		if (numero > 20 && numero != 30 && numero != 40 && numero != 50 && numero != 60 && numero != 70 && numero != 80
+				&& numero != 90 && numero <= 99) {
 			valorDecena = switch (decena) {
 			case 2 -> "veinti";
 			case 3 -> "treinta y ";
@@ -127,10 +122,7 @@ public class Ejercicio4 {
 			};
 			System.out.println("El número introducido es " + valorDecena + valorUnidad);
 		}
-
 		// cerramos escaner
 		sc.close();
-
 	}
-
 }
