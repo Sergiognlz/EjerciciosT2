@@ -23,7 +23,7 @@ public class Ejercicio7 {
 				System.out.println("El valor introducido para horas no es válido.");
 			}
 		} while (horas < 0 || horas > 23);
-
+		//repetimos proceso con minutos y horas
 		do {
 			// pedimos minutos
 			System.out.println("Introduce los minutos");
@@ -44,23 +44,23 @@ public class Ejercicio7 {
 			}
 
 		} while (segundos < 0 || segundos > 59);
-		
+		//realizamos el incremento de un segundo
 		segundos++;
-		
+		//creamos excepciones con if para cuando los valores con el incremento se salgan del rango que queremos
 		if (segundos >= 60) {
-			segundos= 0;
+			segundos = 0;
 			minutos++;
 		}
-		if(minutos>=60) {
-			minutos=0;
+		if (minutos >= 60) {
+			minutos = 0;
 			horas++;
 		}
-		if(horas>=24) {
-			horas=0;
+		if (horas >= 24) {
+			horas = 0;
 		}
-	
+		//imprimimos pantalla con el resultado
 		System.out.println("Son las " + horas + ":" + minutos + ":" + segundos);
-
+		//cerramos escaner
 		sc.close();
 	}
 }
