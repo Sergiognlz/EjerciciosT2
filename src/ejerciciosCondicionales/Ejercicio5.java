@@ -2,7 +2,7 @@ package ejerciciosCondicionales;
 
 import java.util.Scanner;
 
-public class Ejercio5 {
+public class Ejercicio5 {
 	/*
 	 * Utiliza un operador ternario para calcular el valor absoluto de un número que
 	 * se solicita al usuario por teclado.
