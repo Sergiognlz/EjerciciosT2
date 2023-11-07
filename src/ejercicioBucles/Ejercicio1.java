@@ -61,7 +61,7 @@ public class Ejercicio1 {
 		segundos+=incremento;
 		//creamos excepciones con if para cuando los valores con el incremento se salgan del rango que queremos
 		if (segundos >= 60) {
-			segundos = 0;
+			segundos =(segundos-60);
 			minutos++;
 		}
 		if (minutos >= 60) {
