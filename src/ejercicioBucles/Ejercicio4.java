@@ -1,5 +1,6 @@
 package ejercicioBucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio4 {
@@ -13,46 +14,66 @@ public class Ejercicio4 {
 	 */
 	public static void main(String[] args) {
 		//creamos variables para los números a y b
-		int a,b;
+		int a=0,b=0, contador;
 		boolean divisible=false;
 		//creamos escaner
 		Scanner sc=new Scanner(System.in);
 		//creamos do while para evitar errores al introducir números
 		
-			//pedimos el primer número al usuario
-			System.out.println("Introduce el número A.");
-			//guardamos el número
-			a=sc.nextInt();
-			//ponemos if para mostrar el error
-			while(a<=0) {
-				System.out.println("El número introducido para el valor A no es válido.");
+		do {
+			try {
 				System.out.println("Introduce el número A.");
+				//guardamos el número
 				a=sc.nextInt();
+				
+			}catch(InputMismatchException e) {
+				System.out.println("El valor introducido para  A no es válido.");
+				sc.nextLine();
 			}
-		
+		}while(a<=0);
+			
+			
+			
 		//repetimos para b
 		
-			System.out.println("Introduce el número B.");
-			b=sc.nextInt();
-			while(b<=0) {
-				System.out.println("El número introducido para el valor B no es válido.");
+		do {
+			try {
 				System.out.println("Introduce el número B.");
+				//guardamos el número
 				b=sc.nextInt();
+				
+			}catch(InputMismatchException e) {
+				System.out.println("El valor introducido para  B no es válido.");
+				sc.nextLine();
 			}
-		
+		}while(b<=0);
+			
 		
 		if(a<=b) {
-			for(int contador=a;contador>=1;contador--) {
-				System.out.println(contador);
-				if(a%contador==0) {
+			for( contador=a;contador>=1;contador--) {
+			
+				if(a%contador==0&&b%contador==0) {
 					divisible=true;
-					
+					break;
 				}
 		}
 		
-		
+		System.out.println("El máximo común divisor es: "+contador);
 		
 	}
+		if(b<=a) {
+			for( contador=b;contador>=1;contador--) {
+			
+				if(a%contador==0&&b%contador==0) {
+					divisible=true;
+					break;
+				}
+		}
+		
+		System.out.println("El máximo común divisor es: "+contador);
+		
+	}
+		
 		sc.close();
 		
 }
