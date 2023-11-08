@@ -41,23 +41,24 @@ public class Ejercicio5 {
 		} while (b <= 0);
 
 		if (a <= b) {
-			for (contador = 1; contador <= a; contador++) {
+			for (contador = 1; contador <= b; contador++) {
 				if (contador % a == 0 && contador % b == 0) {
 				
 					break;
 				}
 			}
-			System.out.println("El máximo común divisor es: " + contador);
+			
+			System.out.println("El mínimo común múltiplo es: " + (contador));
 		}
 		if (b <= a) {
-			for (contador = 1; contador <= b; contador++) {
-				if (contador % a == contador % b) {
+			for (contador = 1; contador <= a; contador++) {
+				if (contador % a ==0 && contador % b==0) {
 					
 					break;
 				}
 			}
 
-			System.out.println("El máximo común divisor es: " + contador);
+			System.out.println("El mínimo común múltiplo es: " + (contador));
 		}
 		sc.close();
 	}
