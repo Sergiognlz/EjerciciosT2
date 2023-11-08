@@ -13,11 +13,9 @@ public class Ejercicio5 {
 	public static void main(String[] args) {
 		// creamos variables para los números a y b
 		int a = 0, b = 0, contador;
-		boolean multiplo = false;
 		// creamos escaner
 		Scanner sc = new Scanner(System.in);
 		// creamos do while para evitar errores al introducir números
-
 		do {
 			try {
 				System.out.println("Introduce el número A.");
@@ -29,9 +27,7 @@ public class Ejercicio5 {
 				sc.nextLine();
 			}
 		} while (a <= 0);
-
 		// repetimos para b
-
 		do {
 			try {
 				System.out.println("Introduce el número B.");
@@ -46,30 +42,23 @@ public class Ejercicio5 {
 
 		if (a <= b) {
 			for (contador = 1; contador <= a; contador++) {
-
 				if (contador % a == 0 && contador % b == 0) {
-					multiplo = true;
+				
 					break;
 				}
 			}
-
 			System.out.println("El máximo común divisor es: " + contador);
-
 		}
 		if (b <= a) {
 			for (contador = 1; contador <= b; contador++) {
-
 				if (contador % a == contador % b) {
-					multiplo = true;
+					
 					break;
 				}
 			}
 
 			System.out.println("El máximo común divisor es: " + contador);
-
 		}
-
 		sc.close();
-
 	}
 }

@@ -15,7 +15,6 @@ public class Ejercicio4 {
 	public static void main(String[] args) {
 		//creamos variables para los números a y b
 		int a=0,b=0, contador;
-		boolean divisible=false;
 		//creamos escaner
 		Scanner sc=new Scanner(System.in);
 		//creamos do while para evitar errores al introducir números
@@ -53,8 +52,7 @@ public class Ejercicio4 {
 			for( contador=a;contador>=1;contador--) {
 			
 				if(a%contador==0&&b%contador==0) {
-					divisible=true;
-					break;
+						break;
 				}
 		}
 		
@@ -65,7 +63,7 @@ public class Ejercicio4 {
 			for( contador=b;contador>=1;contador--) {
 			
 				if(a%contador==0&&b%contador==0) {
-					divisible=true;
+					
 					break;
 				}
 		}
