@@ -14,32 +14,40 @@ public class Ejercicio4 {
 	public static void main(String[] args) {
 		//creamos variables para los números a y b
 		int a,b;
+		boolean divisible=false;
 		//creamos escaner
 		Scanner sc=new Scanner(System.in);
 		//creamos do while para evitar errores al introducir números
-		do {
+		
 			//pedimos el primer número al usuario
 			System.out.println("Introduce el número A.");
 			//guardamos el número
 			a=sc.nextInt();
 			//ponemos if para mostrar el error
-			if(a<=0) {
+			while(a<=0) {
 				System.out.println("El número introducido para el valor A no es válido.");
+				System.out.println("Introduce el número A.");
+				a=sc.nextInt();
 			}
-		}while(a<=0);
+		
 		//repetimos para b
-		do {
+		
 			System.out.println("Introduce el número B.");
 			b=sc.nextInt();
-			if(b<=0) {
+			while(b<=0) {
 				System.out.println("El número introducido para el valor B no es válido.");
+				System.out.println("Introduce el número B.");
+				b=sc.nextInt();
 			}
-			
-		}while(b<=0);
+		
 		
 		if(a<=b) {
-			for(int contador=a;a<=1;contador--) {
+			for(int contador=a;contador>=1;contador--) {
 				System.out.println(contador);
+				if(a%contador==0) {
+					divisible=true;
+					
+				}
 		}
 		
 		

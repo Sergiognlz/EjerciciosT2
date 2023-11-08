@@ -9,13 +9,12 @@ public class Ejercicio2 {
 	 */
 	public static void main(String[] args) {
 		// creamos las variables
-		int numero;
+		int numero, i, contador = 0;
 		boolean primo = true;
 		// creamos escaner
 		Scanner sc = new Scanner(System.in);
 
 		do {
-
 			// pedimos un número al usuario
 			System.out.println("Introduce un número entero positivo y contaremos cuanto números primos hay hasta él");
 			// guardamos el número introducido
@@ -25,29 +24,25 @@ public class Ejercicio2 {
 			}
 		} while (numero < 1);
 
-		if (numero > 1) {
+		for (int incremento = 2; incremento <= numero; incremento++) {
 
-			for (int i = 2; i < numero; i++) {
-				
-				if (numero % i == 0) {
+			for (i = 2; i < incremento; i++) {
+
+				if (incremento % i == 0) {
 					primo = false;
+
 					break;
-		
 				}
+
 			}
-		} else if (numero == 1) {
-			primo = false;
-		}
-		if (primo == false) {
-			System.out.println("No es primo");
-		}
+			if (primo) {
+				contador++;
+			}
 
-		else {
-			System.out.println("Es primo");
-
+			primo = true;
 		}
+		System.out.println(contador);
 
 		sc.close();
-
 	}
 }
