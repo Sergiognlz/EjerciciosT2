@@ -7,14 +7,14 @@ public class Ejercicio7 {
 	/*
 	 * Escribe un programa que lea un número n e imprima una pirámide de números con
 	 * n filas como en la siguiente figura: 
-		1
-		121
-		12321
-		1234321
+	 * 1 
+	 * 121 
+	 * 12321 
+	 * 1234321
 	 */
 	public static void main(String[] args) {
 		// creamos variable número
-		int numero = 0,contador=1;
+		int numero = 0;
 		// creamos escaner
 		Scanner sc = new Scanner(System.in);
 		// creamos do while para pedir el número
@@ -32,17 +32,24 @@ public class Ejercicio7 {
 				sc.nextLine();
 			}
 		} while (numero < 0 && numero >= 20);
-		// creamos for
+		// creamos 1 for y dentro otros 3
 		for (int fila = 1; fila <= numero; fila++) {
-			// imprimimos números
-			
-			for (int columna = 1; columna <= fila; columna++) {	
-				System.out.print(contador);
+			//el primer for es para los espacios en blancos
+			for (int columna = 1; columna <= numero - fila; columna++) {
+				System.out.print(" ");
 			}
+			//el segundo para los hacia ascendentes
+			for (int columna = 1; columna <= fila; columna++) {
+				System.out.print(columna);
+			}
+			// el tercero para los números descendentes
+			for (int columna = fila - 1; columna >= 1; columna--) {
+				System.out.print(columna);
+			}
+			//salto de línea
 			System.out.println();
-			contador++;
-		
 		}
+		//cerramos escaner
 		sc.close();
 	}
 }
