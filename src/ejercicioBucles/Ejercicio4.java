@@ -13,66 +13,58 @@ public class Ejercicio4 {
 	 * divisor de dos números.
 	 */
 	public static void main(String[] args) {
-		//creamos variables para los números a y b
-		int a=0,b=0, contador;
-		//creamos escaner
-		Scanner sc=new Scanner(System.in);
-		//creamos do while para evitar errores al introducir números
-		
+		// creamos variables para los números a y b
+		int a = 0, b = 0, contador, menor;
+		// creamos escaner
+		Scanner sc = new Scanner(System.in);
+		// creamos do while para evitar errores al introducir números
+
 		do {
 			try {
 				System.out.println("Introduce el número A.");
-				//guardamos el número
-				a=sc.nextInt();
-				
-			}catch(InputMismatchException e) {
+				// guardamos el número
+				a = sc.nextInt();
+
+			} catch (InputMismatchException e) {
 				System.out.println("El valor introducido para  A no es válido.");
 				sc.nextLine();
 			}
-		}while(a<=0);
-			
-			
-			
-		//repetimos para b
-		
+		} while (a <= 0);
+
+		// repetimos para b
+
 		do {
 			try {
 				System.out.println("Introduce el número B.");
-				//guardamos el número
-				b=sc.nextInt();
-				
-			}catch(InputMismatchException e) {
+				// guardamos el número
+				b = sc.nextInt();
+
+			} catch (InputMismatchException e) {
 				System.out.println("El valor introducido para  B no es válido.");
 				sc.nextLine();
 			}
-		}while(b<=0);
-			
-		
-		if(a<=b) {
-			for( contador=a;contador>=1;contador--) {
-			
-				if(a%contador==0&&b%contador==0) {
-						break;
-				}
+		} while (b <= 0);
+
+		if (a <= b) {
+			menor = a;
+
+		} else {
+			menor = b;
 		}
 		
-		System.out.println("El máximo común divisor es: "+contador);
-		
-	}
-		if(b<=a) {
-			for( contador=b;contador>=1;contador--) {
-			
-				if(a%contador==0&&b%contador==0) {
-					
+			for (contador = menor; contador >= 1; contador--) {
+
+				if (a % contador == 0 && b % contador == 0) {
+
 					break;
 				}
-		}
+			}
+
+			System.out.println("El máximo común divisor es: " + contador);
+
 		
-		System.out.println("El máximo común divisor es: "+contador);
-		
-	}
-		
+
 		sc.close();
-		
-}
+
+	}
 }

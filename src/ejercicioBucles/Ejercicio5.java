@@ -12,7 +12,7 @@ public class Ejercicio5 {
 	 */
 	public static void main(String[] args) {
 		// creamos variables para los números a y b
-		int a = 0, b = 0, contador;
+		int a = 0, b = 0, maximo = 1;
 		// creamos escaner
 		Scanner sc = new Scanner(System.in);
 		// creamos do while para evitar errores al introducir números
@@ -41,25 +41,21 @@ public class Ejercicio5 {
 		} while (b <= 0);
 
 		if (a <= b) {
-			for (contador = 1; contador <= b; contador++) {
-				if (contador % a == 0 && contador % b == 0) {
-				
-					break;
-				}
-			}
-			
-			System.out.println("El mínimo común múltiplo es: " + (contador));
-		}
-		if (b <= a) {
-			for (contador = 1; contador <= a; contador++) {
-				if (contador % a ==0 && contador % b==0) {
-					
-					break;
-				}
-			}
+			maximo = b;
 
-			System.out.println("El mínimo común múltiplo es: " + (contador));
 		}
+
+		else {
+
+			maximo = a;
+		}
+
+		while (!(maximo % a == 0 && maximo % b == 0) ){
+			maximo++;
+
+		}
+		System.out.println("El mínimo común múltiplo es: " + (maximo));
+
 		sc.close();
 	}
 }

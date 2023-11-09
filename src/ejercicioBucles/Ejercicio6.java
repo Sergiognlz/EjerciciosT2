@@ -31,10 +31,13 @@ public class Ejercicio6 {
 			}
 		} while (numero < 0 && numero >= 20);
 		// creamos for
-		for (int contador = 1; contador <= numero; contador++) {
+		for (int fila = 1; fila <= numero; fila++) {
 			// imprimimos números
-			System.out.println(contador);
-
+			
+			for(int columna=1;columna<=fila;columna++) {
+				System.out.print(fila);
+			}
+			System.out.println();
 		}
 
 		sc.close();
