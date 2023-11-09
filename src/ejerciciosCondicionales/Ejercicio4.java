@@ -7,12 +7,18 @@ public class Ejercicio4 {
 	 * Escribe un programa que solicite al usuario un número entero entre 1 y 99. El
 	 * programa debe mostrarlo con letras, por ejemplo, para 56 se verá: “cincuenta
 	 * y seis”.
+	 
+	 /*Entrada: 55 |Res. Esperado: cincuenta y cinco |Res. Obtenido: cincuenta y cinco
+	 *Entrada:  11|Res. Esperado: once |Res. Obtenido: once
+	 *Entrada: 69 |Res. Esperado: sesenta y nueve |Res. Obtenido: sesenta y nueve
+	 *
 	 */
 	public static void main(String[] args) {
 		// Creamos la variable donde guardaremos el número que vamos a pedir al usuario.
 		int numero;
 		// creamos variables string para todos los números que vamos a necesitar
 
+		
 		String valorUnidad, valorDecena;
 
 		// creamos el escaner
@@ -93,7 +99,9 @@ public class Ejercicio4 {
 			case 8 -> "dieciocho";
 			case 9 -> "diecinueve";
 			default -> "";
+			
 			};
+			System.out.println("El número introducido es " + valorUnidad);
 		}
 		if (numero > 20 && numero != 30 && numero != 40 && numero != 50 && numero != 60 && numero != 70 && numero != 80
 				&& numero != 90 && numero <= 99) {

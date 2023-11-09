@@ -6,6 +6,10 @@ public class Ejercicio7 {
 	/*
 	 * Dada una hora por teclado, (horas, minutos y segundos) realiza un algoritmo
 	 * que muestre la hora después de incrementarle un segundo.
+	 
+	 *Entrada: Horas=36 Minutos=74 Segundos=67 |Res. Esperado: error |Res. Obtenido: error
+	 *Entrada: Horas=12 Minutos=35 Segundos=20 |Res. Esperado: error |Res. Obtenido: 12:35:21
+	 *Entrada: Horas=23 Minutos=59 Segundos=59 |Res. Esperado: error |Res. Obtenido: 0:0:0
 	 */
 	public static void main(String[] args) {
 		// creamos una variable para cada fragmento horario.

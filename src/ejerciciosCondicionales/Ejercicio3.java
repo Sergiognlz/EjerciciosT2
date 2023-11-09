@@ -2,16 +2,20 @@ package ejerciciosCondicionales;
 
 import java.util.Scanner;
 
-/*En una granja se compra diariamente una cantidad de comida para los animales. 
- Los animales son todos de la misma especie y sabemos que cada animal come los mismos kilos de comida de media diariamente.
-Diseña un programa que solicite al usuario los valores anteriores 
-(cantidad de comida comprada, número de animales y kilos de comida que comen todos los animales en total),
- y determine si disponemos de alimento suficiente para cada animal. 
- En caso negativo, debe calcular cuál es la ración que corresponde a cada uno de los animales.
-
-
-*/
 public class Ejercicio3 {
+	/*En una granja se compra diariamente una cantidad de comida para los animales. 
+	 Los animales son todos de la misma especie y sabemos que cada animal come los mismos kilos de comida de media diariamente.
+	Diseña un programa que solicite al usuario los valores anteriores 
+	(cantidad de comida comprada, número de animales y kilos de comida que comen todos los animales en total),
+	 y determine si disponemos de alimento suficiente para cada animal. 
+	 En caso negativo, debe calcular cuál es la ración que corresponde a cada uno de los animales.
+	*/
+	
+	/*Entrada: Comida comprada:-5, Animales:-1, Kilos Totales: -200 |Res. Esperado: Error |Res. Obtenido: Error
+	 *Entrada: Comida comprada:200, Animales:20, Kilos Totales: 180 |Res. Esperado: Suficiente comida |Res. Obtenido: Suficiente comida
+	 *Entrada: Comida comprada:200, Animales:20, Kilos Totales: 240 |Res. Esperado: Comida insuficiente. Animales comen 12 kg comida |Res. Obtenido:Comida insuficiente. Animales comen 12 kg comida
+	*/
+	
 	public static void main(String[] args) {
 		// creamos variables para los valores que guardaremos
 		double comidaComprada, comidaConsumida;

@@ -9,6 +9,11 @@ public class Ejercicio8 {
 	 * la distancia superior a 800 km el billete tiene una reducción del 30%. El
 	 * precio por kilómetro es de 2,5€. La distancia a recorrer y el número de días
 	 * de estancia los debes solicitar al usuario por teclado.
+	 * 
+	 * 
+	 * Entrada: Km=0 |Res. Esperado: error |Res. Obtenido: error
+	 * Entrada: Km=200 Días=4 |Res. Esperado: 500€ |Res. Obtenido: 500€
+	 * Entrada: Km=850 Días=12 |Res. Esperado: 1487.5€ |Res. Obtenido: 1487.5€
 	 */
 	public static void main(String[] args) {
 		//creamos variables donde guardar los valores que usaremos
