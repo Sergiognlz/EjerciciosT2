@@ -16,9 +16,9 @@ public class Ejercicio7 {
 	 *Entrada: -2 |Res. Esperado: repetición |Res. Obtenido: repetición
 	 *Entrada: 0 |Res. Esperado:  |Res. Obtenido: 
 	 *Entrada: 4 |Res. Esperado: 1	|Res. Obtenido: 1
-							    212				   212
-							   32123              32123	
-							  4321234 			 4321234
+							    121				   121
+							   12321              12321	
+							  1234321 			 1234321
 	 * 
 	 * 
 	 * 
