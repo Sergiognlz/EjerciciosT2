@@ -7,10 +7,21 @@ public class Ejercicio7 {
 	/*
 	 * Escribe un programa que lea un número n e imprima una pirámide de números con
 	 * n filas como en la siguiente figura: 
-	 * 1 
-	 * 121 
-	 * 12321 
+	 *    1 
+	 *   121 
+	 *  12321 
 	 * 1234321
+	 * 
+	 *Entrada: jdjd |Res. Esperado: Error |Res. Obtenido: Error
+	 *Entrada: -2 |Res. Esperado: repetición |Res. Obtenido: repetición
+	 *Entrada: 0 |Res. Esperado:  |Res. Obtenido: 
+	 *Entrada: 4 |Res. Esperado: 1	|Res. Obtenido: 1
+							    212				   212
+							   32123              32123	
+							  4321234 			 4321234
+	 * 
+	 * 
+	 * 
 	 */
 	public static void main(String[] args) {
 		// creamos variable número
@@ -31,7 +42,7 @@ public class Ejercicio7 {
 				System.out.println("El valor introducido no es válido.");
 				sc.nextLine();
 			}
-		} while (numero < 0 && numero >= 20);
+		} while (numero < 0 || numero >= 20);
 		// creamos 1 for y dentro otros 3
 		for (int fila = 1; fila <= numero; fila++) {
 			//el primer for es para los espacios en blancos

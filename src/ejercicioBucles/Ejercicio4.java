@@ -11,6 +11,13 @@ public class Ejercicio4 {
 	 * (-1), el primer número que divide a ambos simultáneamente. Teniendo en cuenta
 	 * lo que se acaba de explicar, realiza un programa que calcule el máximo común
 	 * divisor de dos números.
+	 * 
+	 *Entrada: A=mdmdm B= |Res. Esperado: Error |Res. Obtenido: Error
+	 *Entrada: A=0 B= |Res. Esperado: repetición |Res. Obtenido: repetición
+	 *Entrada: A=5 B=10 |Res. Esperado: 5|Res. Obtenido: 5
+	 *Entrada: A=10 B=5 |Res. Esperado: 5|Res. Obtenido: 5
+	 * 
+	 * 
 	 */
 	public static void main(String[] args) {
 		// creamos variables para los números a y b
@@ -44,26 +51,26 @@ public class Ejercicio4 {
 				sc.nextLine();
 			}
 		} while (b <= 0);
-
+			//creamos if para los distintos casos y asignarle a la variable menor el valor que sea menor de a o b.
 		if (a <= b) {
 			menor = a;
 
 		} else {
 			menor = b;
 		}
-		
+			//creamos un for con un contador que cuenta hacia atrás 
 			for (contador = menor; contador >= 1; contador--) {
-
+				//prueba cada número si cumple la condición del if, si son divisibles
 				if (a % contador == 0 && b % contador == 0) {
-
+					//rompemos el proceso
 					break;
 				}
 			}
-
+			//imprimimos pantalla con el resultado
 			System.out.println("El máximo común divisor es: " + contador);
 
 		
-
+			//cerramos escanner
 		sc.close();
 
 	}

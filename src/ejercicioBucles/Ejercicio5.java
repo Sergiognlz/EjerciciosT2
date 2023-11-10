@@ -9,6 +9,11 @@ public class Ejercicio5 {
 	 * común múltiplo de dos números dados. En este caso, habrá que partir del
 	 * máximo de los dos e ir incrementando hasta encontrar el primer número que sea
 	 * múltiplo de los dos números.
+	 * 
+	 *Entrada: A=mdmdm B= |Res. Esperado: Error |Res. Obtenido: Error
+	 *Entrada: A=0 B= |Res. Esperado: repetición |Res. Obtenido: repetición
+	 *Entrada: A=5 B=10 |Res. Esperado: 10|Res. Obtenido: 10
+	 *Entrada: A=10 B=5 |Res. Esperado: 10|Res. Obtenido: 10
 	 */
 	public static void main(String[] args) {
 		// creamos variables para los números a y b
@@ -39,7 +44,7 @@ public class Ejercicio5 {
 				sc.nextLine();
 			}
 		} while (b <= 0);
-
+		//creamos un if para otorgar a la variabl maximo el valor mayor entre a y b.
 		if (a <= b) {
 			maximo = b;
 
@@ -49,13 +54,15 @@ public class Ejercicio5 {
 
 			maximo = a;
 		}
-
+		//creamos un while para que se active cuando se cumpla la condición
 		while (!(maximo % a == 0 && maximo % b == 0) ){
+			//incremento de la variable maximo.
 			maximo++;
 
 		}
+		//imprimimos pantalla con el resultado
 		System.out.println("El mínimo común múltiplo es: " + (maximo));
-
+		//cerramos escaner
 		sc.close();
 	}
 }

@@ -9,13 +9,21 @@ public class Ejercicio1 {
 		 * aplicación debe mostrar la nueva hora. Por ejemplo, si el usuario introduce
 		 * hora=13, minutos=59 y segundos=51, y se desea incrementar en 10 segundos, el
 		 * resultado a mostrar es 14:00:01.
+		 * 
+		 * 	*Entrada: Horas=40 Minutos=74 Segundos=67 Incremento=10|Res. Esperado: error |Res. Obtenido: error
+		 	*Entrada: Horas=12 Minutos=35 Segundos=20 Incremento=10|Res. Esperado: 12:35:30 |Res. Obtenido: 12:35:21
+		 	*Entrada: Horas=23 Minutos=59 Segundos=59 Incremento=10|Res. Esperado: error |Res. Obtenido: 0:0:9
+		 * 
+		 * 
+		 * 
 		 */
+	
 	public static void main(String[] args) {
 		// creamos una variable para cada fragmento horario.
 		int horas, minutos, segundos,incremento=0;
 		// creamos el escaner
 		Scanner sc = new Scanner(System.in);
-		// creamos un do while para que si introducimos un valor no válido nos dé un
+		// creamos un do while para que si introducimos un valor no válido nos de un
 		// error y nos lo pida de nuevo.
 		do {
 			// pedimos al usuario que introduzca las horas

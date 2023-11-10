@@ -3,7 +3,16 @@ package ejercicioBucles;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-	/* Solicita al usuario un número n y dibuja un triángulo de base y altura n. */
+	/* Solicita al usuario un número n y dibuja un triángulo de base y altura n.
+	 * /*Entrada: 0 |Res. Esperado: Error |Res. Obtenido: Error
+	 *Entrada: 5 |Res. Esperado: * 			 |Res. Obtenido:  * 			 
+	 							* * 						 * *
+	 						   * * * 						* * * 
+	 						  * * * * 					   * * * *
+	 						 * * * * *					  * * * * *
+	 						
+	   */
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int numero;

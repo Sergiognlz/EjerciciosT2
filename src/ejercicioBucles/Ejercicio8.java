@@ -9,6 +9,11 @@ public class Ejercicio8 {
 	 * el último dado. La introducción de números finaliza con la introducción de un
 	 * 0. Al final se mostrará: El total de números introducidos, excluido el 0. El
 	 * total de números fallados.
+	 * 
+	 * Entrada: jdjd |Res. Esperado: Error |Res. Obtenido: Error
+	 * Entrada: Inicial=0 Numero= |Res. Esperado: repetición |Res. Obtenido: repetición
+	 * Entrada: Inicial=1 Numero=3 Numero=2 Numero=0|Res. Esperado: Introducidos=3 Fallados=0 |Res. Obtenido: Introducidos=3 Fallados=0
+	 * 
 	 */
 	public static void main(String[] args) {
 		// creamos tres variables
@@ -30,7 +35,7 @@ public class Ejercicio8 {
 				sc.nextLine();
 			}
 			// condición de salida
-		} while (numeroInicial < 0);
+		} while (numeroInicial <= 0);
 		// creamos otro do while con para los números que se pedirán y guardarán a
 		// continuación
 		do {
@@ -42,6 +47,7 @@ public class Ejercicio8 {
 				numero = sc.nextInt();
 				// incrementamos contador de números introducidos
 				introducido++;
+				
 				// creamos un if con la comparación en la que entrará si el número introducido
 				// es menor que el número inicial y no es 0
 				if (numero < numeroInicial && numero != 0) {
@@ -50,6 +56,8 @@ public class Ejercicio8 {
 					// incrementamos contador de fallados
 					fallado++;
 				}
+				//igualamos numero inicial a numero
+				numeroInicial=numero;
 				// excepción
 			} catch (InputMismatchException e) {
 				// mensaje de error
